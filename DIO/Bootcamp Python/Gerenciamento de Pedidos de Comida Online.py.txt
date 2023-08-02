@@ -1,0 +1,14 @@
+n = int(input())
+ 
+total = 0
+ 
+for i in range(1, n + 1):
+  pedido = input().split(" ")
+  nome = pedido[0]
+  valor = float(pedido[1])
+  total += valor
+desconto = input()
+desconto = desconto.replace("%","")
+desconto = int(desconto)/100
+valor_a_pagar = (total - total*desconto)
+print(f"Valor total: {valor_a_pagar:.2f}")
